@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: "clinic-organizer"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres/project
+    username: postgres
+    password: root
