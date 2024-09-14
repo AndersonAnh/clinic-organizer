@@ -22,5 +22,7 @@ CREATE TABLE project.patients(
 );
 
 DROP TABLE project.doctors;
+
 DROP TABLE project.specializations;
+
 DROP TABLE project.patients;
