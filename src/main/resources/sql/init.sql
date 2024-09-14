@@ -1,1 +1,1 @@
---CREATE SCHEMA project;
+CREATE SCHEMA project;
