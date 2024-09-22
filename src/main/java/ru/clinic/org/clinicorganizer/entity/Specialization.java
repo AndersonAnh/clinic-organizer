@@ -5,29 +5,23 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import java.util.List;
 
-@Table
+@Table(name = "specializations", schema = "project")
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 @Builder
 
-public class Doctor {
-
+public class Specialization {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     Integer id;
-    @Column(name = "first_name")
-    String firstName;
-    @Column(name = "last_name")
-    String lastName;
-    @Column(name = "specialization_id")
-    Integer specializationId;
+    @Column(name = "name")
+    String name;
 
-    @ManyToOne
-
-    @JoinColumn(name = "specialization_id",insertable = false,updatable = false)
-    Specialization specialization;
+    @OneToMany(mappedBy = "specialization")
+    private List<Doctor> doctors;
 }

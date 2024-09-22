@@ -5,5 +5,6 @@ import org.springframework.stereotype.Repository;
 import ru.clinic.org.clinicorganizer.entity.Doctor;
 
 @Repository
+
 public interface DoctorRepository extends JpaRepository<Doctor,Integer> {
 }
