@@ -6,13 +6,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Table
 @Entity
+@Data
+@Table(name = "doctors", schema = "project")
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@Builder
-
 public class Doctor {
 
     @Id
@@ -27,7 +26,6 @@ public class Doctor {
     Integer specializationId;
 
     @ManyToOne
-
     @JoinColumn(name = "specialization_id",insertable = false,updatable = false)
     Specialization specialization;
 }

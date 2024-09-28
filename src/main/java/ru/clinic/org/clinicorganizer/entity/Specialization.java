@@ -5,15 +5,15 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import java.util.List;
 
-@Table(name = "specializations", schema = "project")
 @Entity
+@Table(name = "specializations", schema = "project")
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @Builder
-
 public class Specialization {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

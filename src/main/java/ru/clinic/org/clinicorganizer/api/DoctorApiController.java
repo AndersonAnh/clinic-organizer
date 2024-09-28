@@ -12,20 +12,19 @@ import ru.clinic.org.clinicorganizer.entity.Doctor;
 import ru.clinic.org.clinicorganizer.exception.DoctorNotFoundException;
 import ru.clinic.org.clinicorganizer.exception.DoctorSpecializationException;
 import ru.clinic.org.clinicorganizer.service.DoctorService;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/doctor")
 @RequiredArgsConstructor
 @Slf4j
-
 public class DoctorApiController {
-
     private final DoctorService doctorService;
 
     @GetMapping
     public ResponseEntity <List<Doctor>> getDoctors(){
-        log.debug("Получен список сотрудников.");
+        log.debug("Получен список сотрудников");
         return new ResponseEntity<>(doctorService.getDoctors(), HttpStatus.OK);
     }
 
@@ -52,5 +51,6 @@ public class DoctorApiController {
             log.error("Ошибка при обновлении сотрудника с id {}:{}",id,e.getMessage());
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
+
     }
 }

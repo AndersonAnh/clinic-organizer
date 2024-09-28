@@ -9,7 +9,6 @@ import ru.clinic.org.clinicorganizer.entity.Doctor;
 
 @Mapper(unmappedTargetPolicy = ReportingPolicy.IGNORE, componentModel = "spring",
         builder = @Builder(disableBuilder = true))
-
 public interface DoctorMapper {
 
     Doctor doctorDtoToDoctor(DoctorDto doctorDto);
