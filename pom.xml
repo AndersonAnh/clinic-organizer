@@ -28,6 +28,10 @@
     </scm>
     <properties>
         <java.version>17</java.version>
+        <spring.boot.dependencies.version>3.3.3</spring.boot.dependencies.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
+        <org.projectlombok.mapstruct.binding>0.2.0</org.projectlombok.mapstruct.binding>
     </properties>
     <dependencies>
 
