@@ -22,6 +22,11 @@ public class Specialization {
     @Column(name = "name")
     String name;
 
+    public Specialization(Integer id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     @OneToMany(mappedBy = "specialization")
     private List<Doctor> doctors;
 }
