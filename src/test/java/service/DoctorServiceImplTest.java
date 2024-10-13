@@ -125,12 +125,6 @@ public class DoctorServiceImplTest {
     @Test
     void shouldThrowDoctorSpecializationExceptionWhenUpdateDoctor(){
 
-        DoctorDtoRequest withoutSpecializationId = DoctorDtoRequest.builder()
-                .firstName("firstName")
-                .lastName("lastName")
-                .specializationId(null)
-                .build();
-
         when(doctorRepository.findById(1)).thenReturn(Optional.ofNullable(mockDoctor));
 
         Assertions.assertThrows(DoctorSpecializationException.class,()-> {

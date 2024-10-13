@@ -58,4 +58,10 @@ public class DoctorApiController {
         log.debug("Получили доктора по Id: {}",id);
         return new ResponseEntity<>(doctorService.getDoctorById(id),HttpStatus.OK);
     }
+
+    @GetMapping("/doctorInfo")
+    public ResponseEntity<List<Doctor>> getAllInfoAboutDoctor(){
+        log.debug("Получение информации сотрудников,включая пациентов и специализацию");
+        return new ResponseEntity<>(doctorService.findAllWithSpecializationsAndPatients(),HttpStatus.OK);
+    }
 }

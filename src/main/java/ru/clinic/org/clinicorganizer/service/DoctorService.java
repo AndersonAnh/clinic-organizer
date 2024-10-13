@@ -18,4 +18,6 @@ public interface DoctorService {
     DoctorDto updateDoctor(Integer id,DoctorDtoRequest doctorDtoRequest);
 
     Optional<DoctorDto> getDoctorById(Integer id);
+
+    List<Doctor> findAllWithSpecializationsAndPatients();
 }
