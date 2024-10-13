@@ -1,19 +1,18 @@
 package ru.clinic.org.clinicorganizer.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
 @Entity
 @Table(name = "specializations", schema = "project")
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Getter
+@Setter
+@ToString(exclude = "doctors")
 public class Specialization {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

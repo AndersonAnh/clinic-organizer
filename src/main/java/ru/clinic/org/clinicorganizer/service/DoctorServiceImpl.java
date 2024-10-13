@@ -60,4 +60,10 @@ public class DoctorServiceImpl implements DoctorService{
                 .orElseThrow(() -> new DoctorNotFoundException("Такого сотрудника в базе данных нет"));
         return Optional.ofNullable(doctorMapper.doctorToDoctorDto(doctor));
     }
+
+    @Override
+    public List<Doctor> findAllWithSpecializationsAndPatients() {
+        return doctorRepository.findAllWithSpecializationsAndPatients();
+    }
+
 }
