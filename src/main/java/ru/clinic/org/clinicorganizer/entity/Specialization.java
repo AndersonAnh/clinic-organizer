@@ -1,5 +1,6 @@
 package ru.clinic.org.clinicorganizer.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,7 +26,7 @@ public class Specialization {
         this.id = id;
         this.name = name;
     }
-
+    @JsonIgnore
     @OneToMany(mappedBy = "specialization")
     private List<Doctor> doctors;
 }
