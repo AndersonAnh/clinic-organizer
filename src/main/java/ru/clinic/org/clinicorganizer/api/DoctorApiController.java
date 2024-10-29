@@ -23,7 +23,7 @@ public class DoctorApiController {
     private final DoctorServiceImpl doctorService;
 
     @GetMapping
-    public ResponseEntity <List<Doctor>> getDoctors(){
+    public ResponseEntity <List<DoctorDto>> getDoctors(){
         log.debug("Получен список сотрудников");
         return new ResponseEntity<>(doctorService.getDoctors(), HttpStatus.OK);
     }

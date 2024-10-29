@@ -22,24 +22,27 @@ public class SpecializationApiController {
     private final SpecializationService specializationService;
 
     @GetMapping
-    public ResponseEntity<List<Specialization>> findAll(){
+    public ResponseEntity<List<Specialization>> findAll() {
         log.debug("Мы получили список новых специализаций");
         return new ResponseEntity<>(specializationService.getAllSpecialization(), HttpStatus.OK);
     }
+
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Specialization>> getSpecializationById(@PathVariable Integer id){
-        log.debug("Получен специализация по ID: {}",id);
-        return new ResponseEntity<>(specializationService.findById(id),HttpStatus.OK);
+    public ResponseEntity<Optional<Specialization>> getSpecializationById(@PathVariable Integer id) {
+        log.debug("Получен специализация по ID: {}", id);
+        return new ResponseEntity<>(specializationService.findById(id), HttpStatus.OK);
     }
+
     @DeleteMapping("/{id}")
-    public HttpStatus deleteSpecializationById(@PathVariable Integer id){
+    public HttpStatus deleteSpecializationById(@PathVariable Integer id) {
         specializationService.deleteSpecialization(id);
-        log.debug("Удалена специализация по Id: {}",id);
+        log.debug("Удалена специализация по Id: {}", id);
         return HttpStatus.OK;
     }
+
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void saveSpecialization(@RequestBody SpecializationDto specializationDto){
-        log.debug("Сохранение спициализации: {}",specializationDto);
+    public void saveSpecialization(@RequestBody SpecializationDto specializationDto) {
+        log.debug("Сохранение спициализации: {}", specializationDto);
         specializationService.saveSpecialization(specializationDto);
     }
 }

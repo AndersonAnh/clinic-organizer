@@ -7,7 +7,7 @@ import ru.clinic.org.clinicorganizer.entity.Patient;
 
 import java.util.List;
 
-public interface PatientRepository extends JpaRepository<Patient,Integer> {
+public interface PatientRepository extends JpaRepository<Patient, Integer> {
 
     @EntityGraph(attributePaths = {"doctors"})
     @Query("select p from Patient p")

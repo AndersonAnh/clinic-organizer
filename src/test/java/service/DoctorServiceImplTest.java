@@ -67,7 +67,7 @@ public class DoctorServiceImplTest {
         List<Doctor> doctors = DoctorUtil.getDoctorsList();
 
         when(doctorRepository.findAll()).thenReturn(doctors);
-        List<Doctor> result = doctorService.getDoctors();
+        List<DoctorDto> result = doctorService.getDoctors();
 
         Assertions.assertFalse(result.isEmpty());
         Assertions.assertEquals(3, result.size());

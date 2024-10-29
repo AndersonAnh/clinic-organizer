@@ -1,7 +1,9 @@
 package ru.clinic.org.clinicorganizer.service;
 
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.clinic.org.clinicorganizer.dto.DoctorDto;
 import ru.clinic.org.clinicorganizer.dto.DoctorDtoRequest;
 import ru.clinic.org.clinicorganizer.entity.Doctor;
@@ -17,6 +19,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class DoctorServiceImpl implements DoctorService{
 
     private final DoctorRepository doctorRepository;
@@ -25,8 +28,11 @@ public class DoctorServiceImpl implements DoctorService{
 
     private final SpecializationRepository specializationRepository;
 
-    public List<Doctor> getDoctors() {
-        return doctorRepository.findAll();
+    public List<DoctorDto> getDoctors() {
+        List<Doctor> doctors = doctorRepository.findAllWithSpecializations();
+        return doctors.stream()
+                .map(doctorMapper::doctorToDoctorDto)
+                .toList();
     }
 
     public DoctorDto saveDoctor(DoctorDtoRequest doctorDtoRequest) {
