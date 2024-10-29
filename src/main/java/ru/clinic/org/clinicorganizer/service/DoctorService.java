@@ -9,7 +9,7 @@ import java.util.Optional;
 
 public interface DoctorService {
 
-    List<Doctor> getDoctors();
+    List<DoctorDto> getDoctors();
 
     DoctorDto saveDoctor(DoctorDtoRequest doctorDtoRequest);
 
@@ -20,4 +20,5 @@ public interface DoctorService {
     Optional<DoctorDto> getDoctorById(Integer id);
 
     List<Doctor> findAllWithSpecializationsAndPatients();
+
 }

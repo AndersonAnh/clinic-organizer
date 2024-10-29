@@ -2,10 +2,10 @@ package ru.clinic.org.clinicorganizer.api;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import ru.clinic.org.clinicorganizer.dto.PatientDto;
 import ru.clinic.org.clinicorganizer.entity.Patient;
 import ru.clinic.org.clinicorganizer.service.PatientService;
 
@@ -21,7 +21,19 @@ public class PatientApiController {
 
     @GetMapping
     public ResponseEntity<List<Patient>> findAll(){
+        log.debug("Получили список пациентов");
         return ResponseEntity.ok(patientService.findAll());
+    }
 
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void save(@RequestBody PatientDto patientDto){
+        log.debug("Сохранили список пациентов");
+    patientService.savePatient(patientDto);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Integer id){
+        log.debug("Удалили пациента по id : {} ",id);
+        patientService.deletePatient(id);
     }
 }

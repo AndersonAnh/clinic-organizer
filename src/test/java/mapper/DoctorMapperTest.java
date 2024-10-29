@@ -17,6 +17,7 @@ public class DoctorMapperTest {
     private final DoctorMapper doctorMapper = Mappers.getMapper(DoctorMapper.class);
 
     @Test
+
     void mapEntityToDtoTest(){
 
         Doctor doctor = DoctorUtil.getDoctorEntity();
