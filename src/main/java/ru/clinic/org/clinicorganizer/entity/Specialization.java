@@ -26,7 +26,7 @@ public class Specialization {
         this.id = id;
         this.name = name;
     }
-
+    @JsonIgnore
     @OneToMany(mappedBy = "specialization")
     @JsonIgnore
     private List<Doctor> doctors;
