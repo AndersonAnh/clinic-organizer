@@ -45,3 +45,15 @@ CREATE TABLE IF NOT EXISTS project.user
     password VARCHAR(128) DEFAULT '{noop}123',
     role     VARCHAR(10)
 );
+
+DROP TABLE project.user;
+
+CREATE TABLE IF NOT EXISTS project.user
+(
+    id       SERIAL       NOT NULL PRIMARY KEY,
+    username VARCHAR(50)  NOT NULL UNIQUE,
+    password VARCHAR(128) NOT NULL,
+    role     VARCHAR(10)
+);
+
+

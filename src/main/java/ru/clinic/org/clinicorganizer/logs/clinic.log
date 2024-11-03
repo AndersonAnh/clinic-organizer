@@ -1,118 +1,247 @@
-2024-10-29T23:36:45.942+03:00  INFO 13776 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Starting ClinicOrganizerApplication using Java 21.0.5 with PID 13776 (C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes started by Андрей in C:\Users\Андрей\IdeaProjects\clinic-organizer)
-2024-10-29T23:36:45.947+03:00 DEBUG 13776 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Running with Spring Boot v3.3.3, Spring v6.1.12
-2024-10-29T23:36:45.948+03:00  INFO 13776 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : No active profile set, falling back to 1 default profile: "default"
-2024-10-29T23:36:46.450+03:00  INFO 13776 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-29T23:36:46.500+03:00  INFO 13776 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 4 JPA repository interfaces.
-2024-10-29T23:36:46.910+03:00  INFO 13776 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-29T23:36:46.920+03:00  INFO 13776 --- [clinic-organizer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-29T23:36:46.921+03:00  INFO 13776 --- [clinic-organizer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-10-29T23:36:46.965+03:00  INFO 13776 --- [clinic-organizer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-29T23:36:46.965+03:00  INFO 13776 --- [clinic-organizer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 984 ms
-2024-10-29T23:36:47.081+03:00  INFO 13776 --- [clinic-organizer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-29T23:36:47.119+03:00  INFO 13776 --- [clinic-organizer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-10-29T23:36:47.151+03:00  INFO 13776 --- [clinic-organizer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-29T23:36:47.392+03:00  INFO 13776 --- [clinic-organizer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-29T23:36:47.411+03:00  INFO 13776 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-29T23:36:47.535+03:00  INFO 13776 --- [clinic-organizer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1cc9bd9b
-2024-10-29T23:36:47.536+03:00  INFO 13776 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-29T23:36:47.561+03:00  WARN 13776 --- [clinic-organizer] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-29T23:36:48.281+03:00  INFO 13776 --- [clinic-organizer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-29T23:36:48.380+03:00  INFO 13776 --- [clinic-organizer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-29T23:36:48.555+03:00  INFO 13776 --- [clinic-organizer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-10-29T23:36:48.887+03:00  WARN 13776 --- [clinic-organizer] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes\ru\clinic\org\clinicorganizer\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in ru.clinic.org.clinicorganizer.repo.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class java.lang.Integer
-2024-10-29T23:36:48.888+03:00  INFO 13776 --- [clinic-organizer] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-29T23:36:48.889+03:00  INFO 13776 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-29T23:36:48.892+03:00  INFO 13776 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-29T23:36:48.893+03:00  INFO 13776 --- [clinic-organizer] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-10-29T23:36:48.903+03:00  INFO 13776 --- [clinic-organizer] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-10-29T23:36:48.915+03:00 ERROR 13776 --- [clinic-organizer] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService' defined in file [C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes\ru\clinic\org\clinicorganizer\service\UserService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in ru.clinic.org.clinicorganizer.repo.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class java.lang.Integer
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.12.jar:6.1.12]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.3.jar:3.3.3]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.3.jar:3.3.3]
-	at ru.clinic.org.clinicorganizer.ClinicOrganizerApplication.main(ClinicOrganizerApplication.java:12) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in ru.clinic.org.clinicorganizer.repo.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class java.lang.Integer
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.12.jar:6.1.12]
-	... 19 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Not a managed type: class java.lang.Integer
-	at org.hibernate.metamodel.model.domain.internal.JpaMetamodelImpl.managedType(JpaMetamodelImpl.java:194) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
-	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:469) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
-	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:99) ~[hibernate-core-6.5.2.Final.jar:6.5.2.Final]
-	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:82) ~[spring-data-jpa-3.3.3.jar:3.3.3]
-	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:69) ~[spring-data-jpa-3.3.3.jar:3.3.3]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:249) ~[spring-data-jpa-3.3.3.jar:3.3.3]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:214) ~[spring-data-jpa-3.3.3.jar:3.3.3]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:197) ~[spring-data-jpa-3.3.3.jar:3.3.3]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:1) ~[spring-data-jpa-3.3.3.jar:3.3.3]
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:317) ~[spring-data-commons-3.3.3.jar:3.3.3]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:286) ~[spring-data-commons-3.3.3.jar:3.3.3]
-	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135) ~[spring-data-commons-3.3.3.jar:3.3.3]
-	at org.springframework.data.util.Lazy.get(Lazy.java:113) ~[spring-data-commons-3.3.3.jar:3.3.3]
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:292) ~[spring-data-commons-3.3.3.jar:3.3.3]
-	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132) ~[spring-data-jpa-3.3.3.jar:3.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.12.jar:6.1.12]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.12.jar:6.1.12]
-	... 30 common frames omitted
-
-2024-10-29T23:39:53.238+03:00  INFO 7748 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Starting ClinicOrganizerApplication using Java 21.0.5 with PID 7748 (C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes started by Андрей in C:\Users\Андрей\IdeaProjects\clinic-organizer)
-2024-10-29T23:39:53.240+03:00 DEBUG 7748 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Running with Spring Boot v3.3.3, Spring v6.1.12
-2024-10-29T23:39:53.241+03:00  INFO 7748 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : No active profile set, falling back to 1 default profile: "default"
-2024-10-29T23:39:53.784+03:00  INFO 7748 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-29T23:39:53.838+03:00  INFO 7748 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
-2024-10-29T23:39:54.230+03:00  INFO 7748 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-29T23:39:54.241+03:00  INFO 7748 --- [clinic-organizer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-29T23:39:54.242+03:00  INFO 7748 --- [clinic-organizer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
-2024-10-29T23:39:54.291+03:00  INFO 7748 --- [clinic-organizer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-29T23:39:54.293+03:00  INFO 7748 --- [clinic-organizer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1016 ms
-2024-10-29T23:39:54.413+03:00  INFO 7748 --- [clinic-organizer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-29T23:39:54.458+03:00  INFO 7748 --- [clinic-organizer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-10-29T23:39:54.490+03:00  INFO 7748 --- [clinic-organizer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-29T23:39:54.730+03:00  INFO 7748 --- [clinic-organizer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-29T23:39:54.754+03:00  INFO 7748 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-29T23:39:54.877+03:00  INFO 7748 --- [clinic-organizer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@224e6e88
-2024-10-29T23:39:54.878+03:00  INFO 7748 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-29T23:39:54.904+03:00  WARN 7748 --- [clinic-organizer] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-29T23:39:55.646+03:00  INFO 7748 --- [clinic-organizer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-29T23:39:55.731+03:00  INFO 7748 --- [clinic-organizer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-29T23:39:55.895+03:00  INFO 7748 --- [clinic-organizer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2024-10-29T23:39:56.279+03:00  WARN 7748 --- [clinic-organizer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-29T23:39:56.303+03:00  INFO 7748 --- [clinic-organizer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
-2024-10-29T23:39:56.688+03:00  INFO 7748 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-29T23:39:56.694+03:00  INFO 7748 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Started ClinicOrganizerApplication in 3.833 seconds (process running for 4.353)
-2024-10-29T23:41:33.483+03:00  INFO 7748 --- [clinic-organizer] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-29T23:41:33.483+03:00  INFO 7748 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-29T23:41:33.484+03:00  INFO 7748 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-10-29T23:42:06.474+03:00 DEBUG 7748 --- [clinic-organizer] [http-nio-8080-exec-6] r.c.o.c.api.DoctorApiController          : Получен список сотрудников
-2024-10-29T23:46:37.424+03:00  INFO 7748 --- [clinic-organizer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-29T23:46:37.425+03:00  INFO 7748 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-29T23:46:37.428+03:00  INFO 7748 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-03T18:02:27.362+03:00  INFO 444 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Starting ClinicOrganizerApplication using Java 21.0.5 with PID 444 (C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes started by Андрей in C:\Users\Андрей\IdeaProjects\clinic-organizer)
+2024-11-03T18:02:27.369+03:00 DEBUG 444 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-11-03T18:02:27.370+03:00  INFO 444 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-11-03T18:02:28.020+03:00  INFO 444 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-03T18:02:28.080+03:00  INFO 444 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 4 JPA repository interfaces.
+2024-11-03T18:02:28.542+03:00  INFO 444 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-03T18:02:28.555+03:00  INFO 444 --- [clinic-organizer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-03T18:02:28.555+03:00  INFO 444 --- [clinic-organizer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-03T18:02:28.607+03:00  INFO 444 --- [clinic-organizer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-03T18:02:28.607+03:00  INFO 444 --- [clinic-organizer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1199 ms
+2024-11-03T18:02:28.761+03:00  INFO 444 --- [clinic-organizer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-03T18:02:28.837+03:00  INFO 444 --- [clinic-organizer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-03T18:02:28.874+03:00  INFO 444 --- [clinic-organizer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-03T18:02:29.204+03:00  INFO 444 --- [clinic-organizer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-03T18:02:29.231+03:00  INFO 444 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-03T18:02:29.404+03:00  INFO 444 --- [clinic-organizer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1cc9bd9b
+2024-11-03T18:02:29.404+03:00  INFO 444 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-03T18:02:29.450+03:00  WARN 444 --- [clinic-organizer] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-03T18:02:30.387+03:00  INFO 444 --- [clinic-organizer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-03T18:02:30.500+03:00  INFO 444 --- [clinic-organizer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T18:02:30.747+03:00  INFO 444 --- [clinic-organizer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-03T18:02:31.206+03:00  WARN 444 --- [clinic-organizer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-03T18:02:31.230+03:00  INFO 444 --- [clinic-organizer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2024-11-03T18:02:31.672+03:00  INFO 444 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-03T18:02:31.683+03:00  INFO 444 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Started ClinicOrganizerApplication in 4.761 seconds (process running for 5.838)
+2024-11-03T18:05:32.804+03:00  INFO 444 --- [clinic-organizer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T18:05:32.807+03:00  INFO 444 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-03T18:05:32.812+03:00  INFO 444 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-03T18:10:27.224+03:00  INFO 12904 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Starting ClinicOrganizerApplication using Java 21.0.5 with PID 12904 (C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes started by Андрей in C:\Users\Андрей\IdeaProjects\clinic-organizer)
+2024-11-03T18:10:27.226+03:00 DEBUG 12904 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-11-03T18:10:27.226+03:00  INFO 12904 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-11-03T18:10:27.767+03:00  INFO 12904 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-03T18:10:27.824+03:00  INFO 12904 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+2024-11-03T18:10:28.224+03:00  INFO 12904 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-03T18:10:28.234+03:00  INFO 12904 --- [clinic-organizer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-03T18:10:28.235+03:00  INFO 12904 --- [clinic-organizer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-03T18:10:28.278+03:00  INFO 12904 --- [clinic-organizer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-03T18:10:28.279+03:00  INFO 12904 --- [clinic-organizer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1019 ms
+2024-11-03T18:10:28.395+03:00  INFO 12904 --- [clinic-organizer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-03T18:10:28.433+03:00  INFO 12904 --- [clinic-organizer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-03T18:10:28.467+03:00  INFO 12904 --- [clinic-organizer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-03T18:10:28.727+03:00  INFO 12904 --- [clinic-organizer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-03T18:10:28.751+03:00  INFO 12904 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-03T18:10:28.889+03:00  INFO 12904 --- [clinic-organizer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1bec1589
+2024-11-03T18:10:28.890+03:00  INFO 12904 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-03T18:10:28.918+03:00  WARN 12904 --- [clinic-organizer] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-03T18:10:29.734+03:00  INFO 12904 --- [clinic-organizer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-03T18:10:29.833+03:00  INFO 12904 --- [clinic-organizer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T18:10:30.021+03:00  INFO 12904 --- [clinic-organizer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-03T18:10:30.411+03:00  WARN 12904 --- [clinic-organizer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-03T18:10:30.425+03:00  INFO 12904 --- [clinic-organizer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2024-11-03T18:10:30.808+03:00  INFO 12904 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-03T18:10:30.814+03:00  INFO 12904 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Started ClinicOrganizerApplication in 3.956 seconds (process running for 4.493)
+2024-11-03T18:10:43.116+03:00  INFO 12904 --- [clinic-organizer] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-03T18:10:43.116+03:00  INFO 12904 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-03T18:10:43.117+03:00  INFO 12904 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-03T18:10:58.921+03:00 DEBUG 12904 --- [clinic-organizer] [http-nio-8080-exec-6] r.c.o.c.api.DoctorApiController          : Получен список сотрудников
+2024-11-03T18:17:17.416+03:00  INFO 12904 --- [clinic-organizer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T18:17:17.418+03:00  INFO 12904 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-03T18:17:17.420+03:00  INFO 12904 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-03T18:19:02.559+03:00  INFO 19416 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Starting ClinicOrganizerApplication using Java 21.0.5 with PID 19416 (C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes started by Андрей in C:\Users\Андрей\IdeaProjects\clinic-organizer)
+2024-11-03T18:19:02.561+03:00 DEBUG 19416 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-11-03T18:19:02.561+03:00  INFO 19416 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-11-03T18:19:03.060+03:00  INFO 19416 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-03T18:19:03.109+03:00  INFO 19416 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 4 JPA repository interfaces.
+2024-11-03T18:19:03.487+03:00  INFO 19416 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-03T18:19:03.497+03:00  INFO 19416 --- [clinic-organizer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-03T18:19:03.497+03:00  INFO 19416 --- [clinic-organizer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-03T18:19:03.540+03:00  INFO 19416 --- [clinic-organizer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-03T18:19:03.540+03:00  INFO 19416 --- [clinic-organizer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 946 ms
+2024-11-03T18:19:03.652+03:00  INFO 19416 --- [clinic-organizer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-03T18:19:03.690+03:00  INFO 19416 --- [clinic-organizer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-03T18:19:03.720+03:00  INFO 19416 --- [clinic-organizer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-03T18:19:03.977+03:00  INFO 19416 --- [clinic-organizer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-03T18:19:03.999+03:00  INFO 19416 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-03T18:19:04.125+03:00  INFO 19416 --- [clinic-organizer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6115846e
+2024-11-03T18:19:04.127+03:00  INFO 19416 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-03T18:19:04.153+03:00  WARN 19416 --- [clinic-organizer] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-03T18:19:04.907+03:00  INFO 19416 --- [clinic-organizer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-03T18:19:04.992+03:00  INFO 19416 --- [clinic-organizer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T18:19:05.160+03:00  INFO 19416 --- [clinic-organizer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-03T18:19:05.554+03:00  WARN 19416 --- [clinic-organizer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-03T18:19:05.569+03:00  INFO 19416 --- [clinic-organizer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2024-11-03T18:19:05.941+03:00  INFO 19416 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-03T18:19:05.947+03:00  INFO 19416 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Started ClinicOrganizerApplication in 3.761 seconds (process running for 4.286)
+2024-11-03T18:19:16.835+03:00  INFO 19416 --- [clinic-organizer] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-03T18:19:16.835+03:00  INFO 19416 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-03T18:19:16.836+03:00  INFO 19416 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-03T18:20:24.124+03:00  INFO 19416 --- [clinic-organizer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T18:20:24.126+03:00  INFO 19416 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-03T18:20:24.127+03:00  INFO 19416 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-03T19:18:39.113+03:00  INFO 4800 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Starting ClinicOrganizerApplication using Java 21.0.5 with PID 4800 (C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes started by Андрей in C:\Users\Андрей\IdeaProjects\clinic-organizer)
+2024-11-03T19:18:39.115+03:00 DEBUG 4800 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-11-03T19:18:39.115+03:00  INFO 4800 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-11-03T19:18:39.635+03:00  INFO 4800 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-03T19:18:39.685+03:00  INFO 4800 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 4 JPA repository interfaces.
+2024-11-03T19:18:40.098+03:00  INFO 4800 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-03T19:18:40.110+03:00  INFO 4800 --- [clinic-organizer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-03T19:18:40.110+03:00  INFO 4800 --- [clinic-organizer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-03T19:18:40.153+03:00  INFO 4800 --- [clinic-organizer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-03T19:18:40.153+03:00  INFO 4800 --- [clinic-organizer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1006 ms
+2024-11-03T19:18:40.278+03:00  INFO 4800 --- [clinic-organizer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-03T19:18:40.320+03:00  INFO 4800 --- [clinic-organizer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-03T19:18:40.350+03:00  INFO 4800 --- [clinic-organizer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-03T19:18:40.595+03:00  INFO 4800 --- [clinic-organizer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-03T19:18:40.614+03:00  INFO 4800 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-03T19:18:40.748+03:00  INFO 4800 --- [clinic-organizer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@38cf3ae1
+2024-11-03T19:18:40.748+03:00  INFO 4800 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-03T19:18:40.775+03:00  WARN 4800 --- [clinic-organizer] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-03T19:18:41.534+03:00  INFO 4800 --- [clinic-organizer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-03T19:18:41.623+03:00  INFO 4800 --- [clinic-organizer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T19:18:41.807+03:00  INFO 4800 --- [clinic-organizer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-03T19:18:42.215+03:00  WARN 4800 --- [clinic-organizer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-03T19:18:42.237+03:00  INFO 4800 --- [clinic-organizer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2024-11-03T19:18:42.694+03:00  INFO 4800 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-03T19:18:42.701+03:00  INFO 4800 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Started ClinicOrganizerApplication in 3.95 seconds (process running for 4.457)
+2024-11-03T19:18:49.959+03:00  INFO 4800 --- [clinic-organizer] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-03T19:18:49.959+03:00  INFO 4800 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-03T19:18:49.959+03:00  INFO 4800 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-11-03T19:25:07.840+03:00  INFO 4800 --- [clinic-organizer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T19:25:07.843+03:00  INFO 4800 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-03T19:25:07.846+03:00  INFO 4800 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-03T19:34:05.295+03:00  INFO 18724 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Starting ClinicOrganizerApplication using Java 21.0.5 with PID 18724 (C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes started by Андрей in C:\Users\Андрей\IdeaProjects\clinic-organizer)
+2024-11-03T19:34:05.296+03:00 DEBUG 18724 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-11-03T19:34:05.297+03:00  INFO 18724 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-11-03T19:34:05.805+03:00  INFO 18724 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-03T19:34:05.859+03:00  INFO 18724 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 4 JPA repository interfaces.
+2024-11-03T19:34:06.274+03:00  INFO 18724 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-03T19:34:06.284+03:00  INFO 18724 --- [clinic-organizer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-03T19:34:06.284+03:00  INFO 18724 --- [clinic-organizer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-03T19:34:06.328+03:00  INFO 18724 --- [clinic-organizer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-03T19:34:06.328+03:00  INFO 18724 --- [clinic-organizer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 997 ms
+2024-11-03T19:34:06.453+03:00  INFO 18724 --- [clinic-organizer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-03T19:34:06.496+03:00  INFO 18724 --- [clinic-organizer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-03T19:34:06.525+03:00  INFO 18724 --- [clinic-organizer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-03T19:34:06.762+03:00  INFO 18724 --- [clinic-organizer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-03T19:34:06.783+03:00  INFO 18724 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-03T19:34:06.905+03:00  INFO 18724 --- [clinic-organizer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@17d816b3
+2024-11-03T19:34:06.906+03:00  INFO 18724 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-03T19:34:06.931+03:00  WARN 18724 --- [clinic-organizer] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-03T19:34:07.663+03:00  INFO 18724 --- [clinic-organizer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-03T19:34:07.752+03:00  INFO 18724 --- [clinic-organizer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T19:34:07.927+03:00  INFO 18724 --- [clinic-organizer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-03T19:34:08.349+03:00  WARN 18724 --- [clinic-organizer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-03T19:34:08.368+03:00  INFO 18724 --- [clinic-organizer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2024-11-03T19:34:08.819+03:00  INFO 18724 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-03T19:34:08.826+03:00  INFO 18724 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Started ClinicOrganizerApplication in 3.901 seconds (process running for 4.429)
+2024-11-03T19:34:18.546+03:00  INFO 18724 --- [clinic-organizer] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-03T19:34:18.546+03:00  INFO 18724 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-03T19:34:18.547+03:00  INFO 18724 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-03T19:38:13.684+03:00 DEBUG 18724 --- [clinic-organizer] [http-nio-8080-exec-9] r.c.o.c.api.DoctorApiController          : Получен список сотрудников
+2024-11-03T19:49:43.283+03:00  INFO 18724 --- [clinic-organizer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T19:49:43.285+03:00  INFO 18724 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-03T19:49:43.287+03:00  INFO 18724 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-03T19:49:49.074+03:00  INFO 19648 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Starting ClinicOrganizerApplication using Java 21.0.5 with PID 19648 (C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes started by Андрей in C:\Users\Андрей\IdeaProjects\clinic-organizer)
+2024-11-03T19:49:49.076+03:00 DEBUG 19648 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-11-03T19:49:49.076+03:00  INFO 19648 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-11-03T19:49:49.601+03:00  INFO 19648 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-03T19:49:49.655+03:00  INFO 19648 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+2024-11-03T19:49:50.089+03:00  INFO 19648 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-03T19:49:50.099+03:00  INFO 19648 --- [clinic-organizer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-03T19:49:50.099+03:00  INFO 19648 --- [clinic-organizer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-03T19:49:50.143+03:00  INFO 19648 --- [clinic-organizer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-03T19:49:50.144+03:00  INFO 19648 --- [clinic-organizer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1035 ms
+2024-11-03T19:49:50.279+03:00  INFO 19648 --- [clinic-organizer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-03T19:49:50.322+03:00  INFO 19648 --- [clinic-organizer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-03T19:49:50.349+03:00  INFO 19648 --- [clinic-organizer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-03T19:49:50.586+03:00  INFO 19648 --- [clinic-organizer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-03T19:49:50.607+03:00  INFO 19648 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-03T19:49:50.728+03:00  INFO 19648 --- [clinic-organizer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@308a9264
+2024-11-03T19:49:50.729+03:00  INFO 19648 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-03T19:49:50.755+03:00  WARN 19648 --- [clinic-organizer] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-03T19:49:51.534+03:00  INFO 19648 --- [clinic-organizer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-03T19:49:51.625+03:00  INFO 19648 --- [clinic-organizer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T19:49:51.832+03:00  INFO 19648 --- [clinic-organizer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-03T19:49:52.297+03:00  WARN 19648 --- [clinic-organizer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-03T19:49:52.319+03:00  INFO 19648 --- [clinic-organizer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2024-11-03T19:49:52.787+03:00  INFO 19648 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-03T19:49:52.792+03:00  INFO 19648 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Started ClinicOrganizerApplication in 4.087 seconds (process running for 4.626)
+2024-11-03T19:49:58.421+03:00  INFO 19648 --- [clinic-organizer] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-03T19:49:58.421+03:00  INFO 19648 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-03T19:49:58.423+03:00  INFO 19648 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2024-11-03T19:51:42.481+03:00  INFO 19648 --- [clinic-organizer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T19:51:42.483+03:00  INFO 19648 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-03T19:51:42.487+03:00  INFO 19648 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-03T19:51:52.101+03:00  INFO 8976 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Starting ClinicOrganizerApplication using Java 21.0.5 with PID 8976 (C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes started by Андрей in C:\Users\Андрей\IdeaProjects\clinic-organizer)
+2024-11-03T19:51:52.102+03:00 DEBUG 8976 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-11-03T19:51:52.104+03:00  INFO 8976 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-11-03T19:51:52.615+03:00  INFO 8976 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-03T19:51:52.671+03:00  INFO 8976 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+2024-11-03T19:51:53.089+03:00  INFO 8976 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-03T19:51:53.099+03:00  INFO 8976 --- [clinic-organizer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-03T19:51:53.099+03:00  INFO 8976 --- [clinic-organizer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-03T19:51:53.144+03:00  INFO 8976 --- [clinic-organizer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-03T19:51:53.144+03:00  INFO 8976 --- [clinic-organizer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1007 ms
+2024-11-03T19:51:53.269+03:00  INFO 8976 --- [clinic-organizer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-03T19:51:53.315+03:00  INFO 8976 --- [clinic-organizer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-03T19:51:53.344+03:00  INFO 8976 --- [clinic-organizer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-03T19:51:53.586+03:00  INFO 8976 --- [clinic-organizer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-03T19:51:53.607+03:00  INFO 8976 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-03T19:51:53.730+03:00  INFO 8976 --- [clinic-organizer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@308a9264
+2024-11-03T19:51:53.732+03:00  INFO 8976 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-03T19:51:53.757+03:00  WARN 8976 --- [clinic-organizer] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-03T19:51:54.482+03:00  INFO 8976 --- [clinic-organizer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-03T19:51:54.567+03:00  INFO 8976 --- [clinic-organizer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T19:51:54.751+03:00  INFO 8976 --- [clinic-organizer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-03T19:51:55.171+03:00  WARN 8976 --- [clinic-organizer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-03T19:51:55.189+03:00  INFO 8976 --- [clinic-organizer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2024-11-03T19:51:55.646+03:00  INFO 8976 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-03T19:51:55.652+03:00  INFO 8976 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Started ClinicOrganizerApplication in 3.914 seconds (process running for 4.451)
+2024-11-03T19:52:00.966+03:00  INFO 8976 --- [clinic-organizer] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-03T19:52:00.967+03:00  INFO 8976 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-03T19:52:00.968+03:00  INFO 8976 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-03T19:53:34.291+03:00  INFO 8976 --- [clinic-organizer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T19:53:34.292+03:00  INFO 8976 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-03T19:53:34.296+03:00  INFO 8976 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-11-03T19:55:32.937+03:00  INFO 2332 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Starting ClinicOrganizerApplication using Java 21.0.5 with PID 2332 (C:\Users\Андрей\IdeaProjects\clinic-organizer\target\classes started by Андрей in C:\Users\Андрей\IdeaProjects\clinic-organizer)
+2024-11-03T19:55:32.939+03:00 DEBUG 2332 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Running with Spring Boot v3.3.3, Spring v6.1.12
+2024-11-03T19:55:32.940+03:00  INFO 2332 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-11-03T19:55:33.472+03:00  INFO 2332 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-03T19:55:33.524+03:00  INFO 2332 --- [clinic-organizer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2024-11-03T19:55:33.960+03:00  INFO 2332 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-03T19:55:33.970+03:00  INFO 2332 --- [clinic-organizer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-03T19:55:33.970+03:00  INFO 2332 --- [clinic-organizer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2024-11-03T19:55:34.019+03:00  INFO 2332 --- [clinic-organizer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-03T19:55:34.019+03:00  INFO 2332 --- [clinic-organizer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1042 ms
+2024-11-03T19:55:34.167+03:00  INFO 2332 --- [clinic-organizer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-03T19:55:34.214+03:00  INFO 2332 --- [clinic-organizer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-11-03T19:55:34.239+03:00  INFO 2332 --- [clinic-organizer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-03T19:55:34.483+03:00  INFO 2332 --- [clinic-organizer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-03T19:55:34.502+03:00  INFO 2332 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-11-03T19:55:34.627+03:00  INFO 2332 --- [clinic-organizer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@308a9264
+2024-11-03T19:55:34.629+03:00  INFO 2332 --- [clinic-organizer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-11-03T19:55:34.654+03:00  WARN 2332 --- [clinic-organizer] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-03T19:55:35.381+03:00  INFO 2332 --- [clinic-organizer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-03T19:55:35.467+03:00  INFO 2332 --- [clinic-organizer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T19:55:35.655+03:00  INFO 2332 --- [clinic-organizer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-03T19:55:36.088+03:00  WARN 2332 --- [clinic-organizer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-03T19:55:36.107+03:00  INFO 2332 --- [clinic-organizer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userService
+2024-11-03T19:55:36.555+03:00  INFO 2332 --- [clinic-organizer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-11-03T19:55:36.561+03:00  INFO 2332 --- [clinic-organizer] [main] r.c.o.c.ClinicOrganizerApplication       : Started ClinicOrganizerApplication in 4.007 seconds (process running for 4.563)
+2024-11-03T19:55:58.605+03:00  INFO 2332 --- [clinic-organizer] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-03T19:55:58.605+03:00  INFO 2332 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-11-03T19:55:58.606+03:00  INFO 2332 --- [clinic-organizer] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-11-03T19:57:08.259+03:00  INFO 2332 --- [clinic-organizer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-03T19:57:08.261+03:00  INFO 2332 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-11-03T19:57:08.263+03:00  INFO 2332 --- [clinic-organizer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

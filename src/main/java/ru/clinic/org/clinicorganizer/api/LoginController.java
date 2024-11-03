@@ -10,4 +10,9 @@ public class LoginController {
     public String loginPage() {
         return "user/login";
     }
+
+    @GetMapping("/")
+    public String defaultAfterLogin(){
+        return "redirect:/users";
+    }
 }
