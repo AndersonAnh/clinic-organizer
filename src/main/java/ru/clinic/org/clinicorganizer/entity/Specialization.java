@@ -28,6 +28,6 @@ public class Specialization {
     }
     @JsonIgnore
     @OneToMany(mappedBy = "specialization")
-    @JsonIgnore
+
     private List<Doctor> doctors;
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #343a40;
+            font-weight: 700;
+        }
+        table {
+            margin-top: 20px;
+        }
+        th {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e9ecef;
+        }
+        th, td {
+            text-align: center;
+            vertical-align: middle;
+        }
+        .btn-container {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+        .btn-container .btn {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 class="text-center">Users List</h1>
+    <div class="btn-container">
+        <a href="/users/add" class="btn btn-success">Add User</a>
+        <a href="/users/delete" class="btn btn-danger">Delete User</a>
+    </div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Role</th>
+            <th>Enabled</th>
+            <th>Account Non Expired</th>
+            <th>Credentials Non Expired</th>
+            <th>Account Non Locked</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${users}">
+            <td th:text="${user.id}">1</td>
+            <td th:text="${user.username}">nikola@mail.ru</td>
+            <td th:text="${user.password}">$2a$10$EyiAlaLp8MSYy0jEcZu4aumpEi4Fpoapj6XiRhirRqqBks/lQDBqy</td>
+            <td th:text="${user.role}">ADMIN</td>
+            <td th:text="${user.enabled}">true</td>
+            <td th:text="${user.accountNonExpired}">true</td>
+            <td th:text="${user.credentialsNonExpired}">true</td>
+            <td th:text="${user.accountNonLocked}">true</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

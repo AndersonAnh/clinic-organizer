@@ -35,3 +35,10 @@ VALUES (1, 1),
        (6, 3),
        (7, 2),
        (4, 10)
+INSERT INTO project.user (id,username, password, role)
+VALUES (1,'andrey@mail.ru', '{noop}123', 'ADMIN');
+
+INSERT INTO project.user (id, username, password, role)
+VALUES (1, 'andrey@mail.ru', '$2a$10$HWdW2Ei9IEDepUfnjtMLCOYuZIHQ0xqSfuQKVbjqmjyzt28s44sHq', 'ADMIN');
+
+SELECT setval('project.user_id_seq', (SELECT MAX(id) FROM project.user));
