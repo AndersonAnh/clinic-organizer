@@ -36,3 +36,12 @@ DROP TABLE project.doctor_patient;
 SELECT setval('project.specializations_id_seq', (SELECT MAX(id) FROM project.specializations));
 
 SELECT setval('project.patients_id_seq', (SELECT MAX(id) FROM project.patients));
+
+
+CREATE TABLE IF NOT EXISTS project.user
+(
+    id       SERIAL NOT NULL PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(128) DEFAULT '{noop}123',
+    role     VARCHAR(10)
+);

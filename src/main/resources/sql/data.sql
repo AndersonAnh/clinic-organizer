@@ -35,3 +35,5 @@ VALUES (1, 1),
        (6, 3),
        (7, 2),
        (4, 10)
+INSERT INTO project.user (id,username, password, role)
+VALUES (1,'andrey@mail.ru', '{noop}123', 'ADMIN');
