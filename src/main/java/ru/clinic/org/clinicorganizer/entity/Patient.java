@@ -29,6 +29,12 @@ public class Patient {
     @JsonBackReference
     Set<Doctor> doctors;
 
+    public Patient(Integer id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -3,18 +3,21 @@ package util;
 import ru.clinic.org.clinicorganizer.dto.DoctorDto;
 import ru.clinic.org.clinicorganizer.dto.DoctorDtoRequest;
 import ru.clinic.org.clinicorganizer.entity.Doctor;
+import ru.clinic.org.clinicorganizer.entity.Patient;
 import ru.clinic.org.clinicorganizer.entity.Specialization;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class DoctorUtil {
 
     public static List<Doctor> getDoctorsList() {
         List<Doctor> doctors = new ArrayList<>();
-        doctors.add(new Doctor(2, "Joe", "Doe", 1, new Specialization(1, "Dentist")));
-        doctors.add(new Doctor(2, "Joe", "Doe", 1, new Specialization(1, "Dentist")));
-        doctors.add(new Doctor(2, "Joe", "Doe", 1, new Specialization(1, "Dentist")));
+        doctors.add(new Doctor(2, "Joe", "Doe", 1, new Specialization(1, "Dentist"),getPatientsSet()));
+        doctors.add(new Doctor(2, "Joe", "Doe", 1, new Specialization(1, "Dentist"),getPatientsSet()));
+        doctors.add(new Doctor(2, "Joe", "Doe", 1, new Specialization(1, "Dentist"),getPatientsSet()));
+
         return doctors;
     }
 
@@ -38,7 +41,8 @@ public class DoctorUtil {
                 .build();
     }
 
-   /* public static Set<Patient> getPatientsSet() {
-        return Set.of(new Patient(1,"John","Doe"),            new Patient(1,"Jane","Doe"));
-    }*/
+    public static Set<Patient> getPatientsSet() {
+        return Set.of(new Patient(1, "John", "Doe"),
+                new Patient(1, "Jane", "Doe"));
+    }
 }
