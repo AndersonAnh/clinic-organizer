@@ -29,4 +29,14 @@ public class PatientServiceImpl implements PatientService{
     public void deletePatient(Integer id) {
         patientRepository.deleteById(id);
     }
+
+    @Override
+    public PatientDto update(PatientDto patientDto) {
+        Patient patient = patientRepository.findById(patientDto.id())
+                .orElseThrow(()->new IllegalArgumentException("Пациент не найден с ID " + patientDto.id()));
+        patient.setFirstName(patientDto.firstName());
+        patient.setLastName(patientDto.lastName());
+        Patient updatedPatient = patientRepository.save(patient);
+        return patientMapper.patientToPatientDto(updatedPatient);
+    }
 }
