@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить пользователя</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-5">Add User</h1>
+    <form th:action="@{/users/add}" th:object="${user}" method="post">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" th:field="*{username}" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" th:field="*{password}" required>
+        </div>
+        <div class="form-group">
+            <label for="role">Role</label>
+            <input type="text" class="form-control" id="role" th:field="*{role}" required>
+        </div>
+        <div class="form-group">
+            <label for="enabled">Enabled</label>
+            <input type="checkbox" id="enabled" th:field="*{enabled}">
+        </div>
+        <div class="form-group">
+            <label for="accountNonExpired">Account Non Expired</label>
+            <input type="checkbox" id="accountNonExpired" th:field="*{accountNonExpired}">
+        </div>
+        <div class="form-group">
+            <label for="credentialsNonExpired">Credentials Non Expired</label>
+            <input type="checkbox" id="credentialsNonExpired" th:field="*{credentialsNonExpired}">
+        </div>
+        <div class="form-group">
+            <label for="accountNonLocked">Account Non Locked</label>
+            <input type="checkbox" id="accountNonLocked" th:field="*{accountNonLocked}">
+        </div>
+        <button type="submit" class="btn btn-primary">Добавить пользователя</button>
+    </form>
+</div>
+</body>
+</html>
